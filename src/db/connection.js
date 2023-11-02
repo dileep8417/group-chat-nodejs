@@ -1,11 +1,12 @@
 const mysql = require('mysql2-promise');
 const db = mysql();
+const { dbCredentials } = require('../config');
 
 db.configure({
-    host: process.env.HOST || 'localhost',
-    user: process.env.USER || 'dileep',
-    password: process.env.PASSWORD || '4242',
-    database: process.env.DB || 'my_chat_app',
+    host: dbCredentials.host,
+    user: dbCredentials.user,
+    password: dbCredentials.password,
+    database: dbCredentials.database
 });
 
 module.exports = db;

@@ -1,3 +1,11 @@
+// To connect with database
+exports.dbCredentials = {
+    host: process.env.HOST || 'localhost',
+    user: process.env.USER || 'dileep',
+    password: process.env.PASSWORD || '4242',
+    database: process.env.DB || 'my_chat_app',
+};
+
 // To authenticate admin
 exports.adminCredentials = {
     mobile: process.env.ADMIN_MOBILE_NUMBER || '9999999999',
