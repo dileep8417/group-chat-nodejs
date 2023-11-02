@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Common routes
-// Routes related to authenticate users
+// Routes to authenticate users
 app.use('/auth', authRoutes);
 
 // Authenitcated Admin routes
