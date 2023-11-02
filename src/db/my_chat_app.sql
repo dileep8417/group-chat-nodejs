@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS `my_chat_app`;
 
+--- Tables to create in above or other database used in the application
+
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(256) DEFAULT NULL,
