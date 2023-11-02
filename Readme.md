@@ -15,6 +15,16 @@ The project follows a modular structure, separating concerns into routes and con
 - **helpers**: Includes utility functions for validation, JWT creation, etc.
 - **constants**: Defines status codes used throughout the application.
 - **db**: Contains DB connection and SQL file.
+- **config.js**: To configure admin and test credentials.
+
+## Roles
+
+1. **Admin**
+   - Predefined user who has elevated privileges.
+   - Admin has the capability to add and edit users within the application.
+2. **Normal User**
+   - Normal Users are regular users added by Admin.
+   - These users have the ability to create, manage groups, and send messages within those groups.
 
 ## Installation
 
@@ -27,11 +37,6 @@ To run the application locally, follow these steps:
     npm install
     ```
 3. Create the database and necessary tables using .sql file from db/
-
-## Roles
-
-1. Admin
-2. Normal User
 
 ## Testing
 
