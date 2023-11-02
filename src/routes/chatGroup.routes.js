@@ -6,7 +6,9 @@ const allowOnlyNormalUser = require('../middlewares/allowOnlyNormalUser');
 const isValidGroupAdmin = require('../middlewares/isValidGroupAdmin');
 const isValidUserId = require('../middlewares/isValidUserId');
 
+// To check user is loggedin or not
 router.use(authenticateUser);
+// To check loggedin user is normal user or not
 router.use(allowOnlyNormalUser);
 
 // base path will be /group
@@ -24,6 +26,5 @@ router.post('/addUser/:groupId/:userId', isValidGroupAdmin, isValidUserId, contr
 
 // to remove user from a chat group
 router.delete('/removeUser/:groupId/:userId', isValidGroupAdmin, isValidUserId, controller.removeUserFromChatGroup);
-
 
 module.exports = router;

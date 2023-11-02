@@ -30,13 +30,7 @@ describe('Test Admin Routes', () => {
             })
             .set('Cookie', authCookies);
 
-        const { success } = resp.body;
-
-        if (success) {
-            expect(resp.status).toBe(statusCodes.success);
-        } else {
-            expect(resp.status).toBe(statusCodes.invalidRequest);
-        }
+        expect(resp.status).toBe(statusCodes.success);
     });
 
     test('Create Another Normal User', async () => {
@@ -49,13 +43,8 @@ describe('Test Admin Routes', () => {
             })
             .set('Cookie', authCookies);
 
-        const { success } = resp.body;
 
-        if (success) {
-            expect(resp.status).toBe(statusCodes.success);
-        } else {
-            expect(resp.status).toBe(statusCodes.invalidRequest);
-        }
+        expect(resp.status).toBe(statusCodes.success);
     });
 
     test('Edit normal user', async () => {

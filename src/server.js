@@ -14,9 +14,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Common routes
+// Routes related to authentication of users
 app.use('/auth', authRoutes);
 
 // Authenitcated Admin routes
+// Routes related to admin role
 app.use('/admin', adminRoutes);
 
 // Authenticated Normal user routes
@@ -25,7 +27,6 @@ app.use('/message', chatMessageRoutes);
 
 const port = process.env.PORT || 5000;
 const server = app.listen(port);
-
 
 const closeServer = () => {
     server.close(() => {
