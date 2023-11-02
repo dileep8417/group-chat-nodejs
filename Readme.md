@@ -8,6 +8,7 @@ This repository contains the source code for a simple Group Chat Application bui
 
 The project follows a modular structure, separating concerns into routes and controllers. Here's an overview:
 
+- **config.js**: To configure database, admin and test user credentials.
 - **routes**: Contains route definitions for different functionalities.
 - **controllers**: Implements the business logic for each functionality.
 - **services**: Handles data-related operations.
@@ -15,7 +16,6 @@ The project follows a modular structure, separating concerns into routes and con
 - **helpers**: Includes utility functions for validation, JWT creation, etc.
 - **constants**: Defines status codes used throughout the application.
 - **db**: Contains DB connection and SQL file.
-- **config.js**: To configure admin and test credentials.
 
 ## Roles
 
@@ -26,7 +26,7 @@ The project follows a modular structure, separating concerns into routes and con
    - Normal Users are regular users added by Admin.
    - These users have the ability to create, manage groups, and send messages within those groups.
 
-## Installation
+## Setup
 
 To run the application locally, follow these steps:
 
@@ -36,7 +36,9 @@ To run the application locally, follow these steps:
     ```bash
     npm install
     ```
-3. Create the database and necessary tables using .sql file from db/
+3. Create the database and necessary tables using .sql file from **db/**.
+   
+4. In **config.js** configure your database credentials.
 
 ## Testing
 
